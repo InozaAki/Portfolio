@@ -1,0 +1,25 @@
+---
+import {Image} from "astro:assets";
+const { title, imageUrl } = Astro.props;
+---
+
+<div class="card-container shadow-lg h-full">
+    <div class="card-content flex flex-col items-center justify-center p-2 h-full">
+        <Image src={imageUrl} loading={"lazy"} alt={title} width={50} height={50} class="card-image"/>
+        <h3 class="card-title text-lg font-bold mt-2">{title}</h3>
+    </div>
+</div>
+
+<style>
+    .card-container {
+        width: 100%;
+        background-color: var(--color-secondary);
+        border-radius: 8px;
+    }
+    .card-title {
+        text-align: center;
+    }
+    .card-image{
+        object-fit: contain;
+    }
+</style>

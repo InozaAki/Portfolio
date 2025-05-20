@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets"
+import Footer from "./Footer.astro"
+---
+<div class="contact-container h-screen min-h-screen flex flex-col" id="contact">
+    <h2 class="contact-title shadow-lg rounded">Contact</h2>
+    <div class="contact-content flex-1 flex flex-col items-center justify-center gap-30">
+        <div class="contact-text">
+            <p class="text-lg text-center">
+                If you would like to get in touch, please do not hesitate to do so by email 
+                or by any of the other means listed, I will respond as soon as possible. 
+            </p>
+        </div>
+        <div class="contact-links flex items-center justify-center flex-col">
+            <a class="contact-btn flex gap-1 items-center" href="mailto:axelespinoza887@gmail.com">
+                <Image src="/images/contact/mail.svg" loading={"lazy"} alt="Email Icon" width={25} height={25}></Image>
+                <span>Email</span>
+            </a>
+            <a class="contact-btn flex gap-1 items-center" href="https://wa.link/yag80h">
+                <Image src="/images/contact/phone.svg" loading={"lazy"} alt="Phone Icon" width={25} height={25}></Image>
+                <span>WhatsApp</span>
+            </a>
+    
+            <a class="contact-btn flex gap-1 items-center" href="https://www.linkedin.com/in/axel-antonio-espinosa-espinoza-564035264/">
+                <Image src="/images/contact/linkedin.svg" loading={"lazy"} alt="LinkedIn Icon" width={25} height={25}></Image>
+                <span>LinkedIn</span>
+            </a>
+            <a class="contact-btn flex gap-1 items-center" href="https://x.com/JunoSpinoza">
+                <Image src="/images/contact/x.svg" loading={"lazy"} alt="X Icon" width={30} height={30}></Image>
+                <span>X</span>
+            </a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <Footer/>
+    </div>
+</div>
+
+<style>
+    .contact-title{
+        text-align: center;
+        background-color: var(--color-overlay);
+    }
+    .contact-container {
+        padding: 20px;
+        color: var(--color-text);
+        height: 100vh;
+        min-height: 100vh;
+    }
+    .contact-container h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .contact-btn{
+        background-color: var(--color-overlay);
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+    .contact-btn:hover {
+        background-color: var(--color-highlight-light);
+        font-weight: bold;
+        transform: translateY(-2px);
+        transition: all 0.2s ease-in-out;
+    }
+    .footer{
+    
+    }
+</style>

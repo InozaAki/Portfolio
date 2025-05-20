@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root{
+    --color-primary: #232136;
+    --color-secondary: #2a273f;
+    --color-overlay: #393552;
+    --color-text: #e0def4;
+    --color-subtle: #908caa;
+    --color-highlight-high: #2a283e;
+    --color-highlight-medium: #44415a;
+    --color-highlight-light: #56526e;
+}
+
+@font-face {
+    font-family: 'Mulish-Regular';
+    src: url('/fonts/Mulish-Regular.woff' ) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    box-sizing: border-box;
+}

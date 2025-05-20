@@ -1,0 +1,42 @@
+---
+import Header from '../components/Header.astro';
+import Welcome from '../components/Welcome.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<link rel="stylesheet" href="/src/styles/global.css" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Axel Espinosa - Dev</title>
+	</head>
+	<body>
+		<Header />
+		<Welcome />
+		<AboutMe />
+		<Projects />
+		<Contact />
+	</body>
+</html>
+
+<style>
+	html{
+		scroll-padding-top: 3rem;
+		scroll-behavior: smooth;
+	}
+
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--color-primary);
+        font-family: 'Mulish-Regular', sans-serif;
+		scrollbar-width: none;
+	}
+</style>

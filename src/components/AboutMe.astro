@@ -1,0 +1,102 @@
+---
+import {Image} from 'astro:assets';
+import Card from './Card.astro';
+---
+
+<div class="about-container" id="about">
+    <h2 class="about-me-title shadow-lg rounded">About Me</h2>
+
+    <div class="about-message">
+        <p class="about-text text-lg">
+            I'm Axel Espinosa, a computer enthusiast. Without having any previous knowledge of computers or programming 
+            I decided to choose this path as my career. And although it has been difficult and I have had ups and downs, 
+            the fun, challenges and people I have met through this path I would not change it for anything.
+        </p>
+        <p class="about-text text-lg"> 
+            <span class="highlighted-text font-bold">In every project I like to leave a small part of me</span>, something that 
+            distinguishes the project, either with a nice and cozy design. Or with a system that leaves me satisfied.
+        </p>
+    </div>
+
+    <div class="hobbies-container mt-6">
+        <h3 class="text-center">Hobbies</h3>
+        <div class="hobbie-list grid grid-cols-3 gap-4">
+            <Card title="Manga" imageUrl="/images/hobbies/reading.svg"/>
+            <Card title="Photography" imageUrl="/images/hobbies/polaroid.svg"/>
+            <Card title="Coding" imageUrl="/images/hobbies/coding.svg"/>
+        </div>
+    </div>
+
+    <div class="skills-container mt-6">
+        <h3 class="text-center">Skills</h3>
+        <div class="skill-list grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
+            <Card title="Astro" imageUrl="/images/skills/Astro.svg"/>
+            <Card title="Java" imageUrl="/images/skills/java.svg"/>
+            <Card title="JavaScript" imageUrl="/images/skills/js.svg"/>
+            <Card title="Spring" imageUrl="/images/skills/spring.svg"/>
+            <Card title="PostgreSQL" imageUrl="/images/skills/PostgreSQL.svg"/>
+            <Card title="Oracle DB" imageUrl="/images/skills/oracle.svg"/>
+        </div>
+    </div>
+
+    <div class="cv-container flex flex-col gap-1 items-center justify-center mt-15">
+        <p class="cv-text font-bold">
+            Feel free to check out my CV for more details. :)
+        </p>
+        <div class="cv-files flex flex-col gap-2">
+            <a class="btn flex gap-2" href="/files/CurriculumVitae - English.pdf" target="_blank">
+                <Image src="/pdf-icon.png" loading={"lazy"} width={25} height={25} alt="pdf" class="pdf-icon"/>
+                Download my CV [English]
+            </a>
+            <a class="btn flex gap-2" href="/files/CurriculumVitae - Spanish.pdf" target="_blank">
+                <Image src="/pdf-icon.png" loading={"lazy"} width={25} height={25} alt="pdf" class="pdf-icon"/>
+                Download my CV [Spanish]
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .about-me-title {
+        text-align: center;
+        background-color: var(--color-overlay);
+    }
+    .highlighted-text {
+        color: var(--color-subtle);
+        text-decoration: underline;
+        text-decoration-color: var(--color-highlight-light);
+    }
+    .about-container {
+        padding: 20px;
+        color: var(--color-text);
+        min-height: 100vh;
+        box-sizing: border-box;
+    
+    }
+    .about-container h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .about-container h3{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .about-container p {
+        margin-bottom: 10px;
+    }
+    .btn {
+        background-color: var(--color-secondary);
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+    }
+    .btn:hover {
+        background-color: var(--color-overlay);
+        font-weight: bold;
+        transform: translateY(-2px);
+        transition: all 0.2s ease-in-out;
+    }
+</style>
